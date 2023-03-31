@@ -8,8 +8,8 @@ public class Aim : MonoBehaviour
     void Update()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        worldPosition.z = 0;
 
         this.transform.position = worldPosition;
     }
